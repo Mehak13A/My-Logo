@@ -1,0 +1,38 @@
+.triangle, .triangle:before, .triangle:after { width: 12em; height: 12em; }
+.triangle {
+	overflow: hidden;
+	position: relative;
+	margin: 3em auto 0;
+	border-radius: 20%;
+	transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+	cursor: pointer;
+	pointer-events: none;
+} 
+.triangle:before, .triangle:after {
+	position: absolute;
+	background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,159,0.6292892156862745) 100%);
+
+	pointer-events: auto;
+	content: '';
+}
+.triangle:before {
+	border-radius: 20% 20% 20% 53%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.triangle:after {
+	border-radius: 20% 20% 53% 20%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+.p{
+  font-size: 70px;
+  font-family: "Papyrus", "Courier New", monospace;
+  text-align: center;
+  margin-top: 0px;
+  position:relative; 
+  left: 5px; 
+  top: -90px;
+}
